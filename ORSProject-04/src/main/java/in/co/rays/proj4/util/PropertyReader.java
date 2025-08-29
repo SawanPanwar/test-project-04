@@ -6,7 +6,7 @@ public class PropertyReader {
 
 	private static ResourceBundle rb = ResourceBundle.getBundle("in.co.rays.proj4.bundle.system");
 
-	public static String getValue(String key) {
+	public static String getValue(String key) { // String key = "error.require"
 
 		String val = null;
 
@@ -18,9 +18,9 @@ public class PropertyReader {
 		return val;
 	}
 
-	public static String getValue(String key, String param) {
+	public static String getValue(String key, String param) { // String key = "error.require", String param = "First Name"
 		String msg = getValue(key); // {0} is required
-		msg = msg.replace("{0}", param);
+		msg = msg.replace("{0}", param); // "First Name is required
 		return msg;
 	}
 
